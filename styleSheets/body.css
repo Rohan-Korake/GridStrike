@@ -5,15 +5,14 @@
   scrollbar-width: thin;
 }
 
-body {
-  /* background: linear-gradient(135deg, #0f0c29, #302b63, #24243e); */
+body,
+html {
   background-color: #0f0d21;
-
-  overflow: hidden;
+  height: 100%;
 }
 
 .container {
-  max-height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,7 +21,6 @@ body {
 .card {
   margin: 28px;
   width: 85%;
-  height: 90vh;
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 20px #00fff7;

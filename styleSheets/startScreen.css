@@ -1,7 +1,7 @@
 .startScreenCard {
   top: 50%;
   left: 50%;
-  width: 65vw;
+  width: 70vw;
   max-width: 20rem;
   max-height: 32rem;
   background-color: #111026;
@@ -58,7 +58,7 @@
   align-items: center;
   flex-direction: row;
   gap: 0.5rem;
-  width: 12.31rem;
+  width: 100%;
 }
 
 .buttonIcon img {
@@ -70,4 +70,5 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 0.3rem 0.3rem;
 }

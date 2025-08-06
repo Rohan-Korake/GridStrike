@@ -126,3 +126,34 @@
     margin-bottom: 3rem;
   }
 }
+
+@media (min-width: 1400px) {
+  .scoreCard {
+    width: 7.5rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .oIcon,
+  .xIcon,
+  .dIcon {
+    font-size: 3.5rem;
+    margin: 0.5rem;
+  }
+
+  .count {
+    width: 100%;
+  }
+
+  .card {
+    gap: 0.5rem;
+  }
+
+  .scoreContainer {
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+}
