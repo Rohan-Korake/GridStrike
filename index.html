@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GridStrike</title>
+    <link rel="icon" href="https://ik.imagekit.io/ik0myx9mu/GridStrike/logo.png?updatedAt=1753526845148"
+        type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="styleSheets/startScreen.css">
+    <link rel="stylesheet" href="styleSheets/body.css" />
+    <link rel="stylesheet" href="styleSheets/header.css" />
+    <link rel="stylesheet" href="styleSheets/board.css" />
+    <link rel="stylesheet" href="styleSheets/scoreBoard.css" />
+    <link rel="stylesheet" href="styleSheets/popup.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="head-content">
+                <div class="logo">
+                    <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/logo.png?updatedAt=1753526845148"
+                        alt="logo" />
+                </div>
+                <div class="name">
+                    <p>GridStrike</p>
+                </div>
+            </div>
+
+            <div class="outerScoreContainer">
+                <div class="scoreContainer">
+                    <div class="scoreCard" id="x">
+                        <div class="xIcon">X</div>
+                        <div class="count" id="xWins">0</div>
+                    </div>
+                    <div class="scoreCard" id="d">
+                        <div class="dIcon">D</div>
+                        <div class="count" id="draw">0</div>
+                    </div>
+                    <div class="scoreCard" id="o">
+                        <div class="oIcon">O</div>
+                        <div class="count" id="oWins">0</div>
+                    </div>
+                </div>
+            </div>
+            <div class="game-content">
+                <div class="board-container" id="board">
+                    <div class="board-row" id="row1">
+                        <div class="block" id="1"></div>
+                        <div class="block" id="2"></div>
+                        <div class="block" id="3"></div>
+                    </div>
+                    <div class="board-row" id="row2">
+                        <div class="block" id="4"></div>
+                        <div class="block" id="5"></div>
+                        <div class="block" id="6"></div>
+                    </div>
+                    <div class="board-row" id="row3">
+                        <div class="block" id="7"></div>
+                        <div class="block" id="8"></div>
+                        <div class="block" id="9"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popupContainer" id="popupContainer">
+        <div class="startScreenCard" id="startScreenPopup">
+            <div class="GameLogo"><img
+                    src="https://ik.imagekit.io/ik0myx9mu/GridStrike/logo.png?updatedAt=1753526845148" alt="Game Logo">
+            </div>
+            <div class="btnContainer">
+                <div class="modeButton" id="singlePlayer">
+                    <div class="buttonIcon"><img
+                            src="https://ik.imagekit.io/ik0myx9mu/GridStrike/singlePlayer.png?updatedAt=1754243603166"
+                            alt=""></div>
+                    <div class="buttonText">Single Player Mode</div>
+                </div>
+                <div class="modeButton" id="twoPlayer">
+                    <div class="buttonIcon"><img
+                            src="https://ik.imagekit.io/ik0myx9mu/GridStrike/twoPlayer.png?updatedAt=1754243924318"
+                            alt="">
+                    </div>
+                    <div class="buttonText">Two Player Mode</div>
+                </div>
+            </div>
+        </div>
+        <div class="popupCard" id="winnerPopup">
+            <div class="starContianer">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star1">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star2">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star3">
+            </div>
+            <div class="greet">Victory!</div>
+            <div class="winner" id="winner">Player X is the winner!</div>
+            <div class="buttonContainer">
+                <div class="gameBtn" id="winnerRematch">Rematch</div>
+                <div class="gameBtn" id="winnerReset">Reset</div>
+            </div>
+        </div>
+        <div class="popupCard" id="drawMatchPopup">
+            <div class="handShake"><img
+                    src="https://ik.imagekit.io/ik0myx9mu/GridStrike/drawMatch.png?updatedAt=1753940165364"
+                    alt="handShake">
+            </div>
+            <div class="greet">It’s a Draw!</div>
+            <div class="winner">Both played well!</div>
+            <div class="buttonContainer">
+                <div class="gameBtn" id="drawRematch">Rematch</div>
+                <div class="gameBtn" id="drawReset">Reset</div>
+            </div>
+        </div>
+        <div class="popupCard" id="playerWinPopup">
+            <div class="starContianer">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star1">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star2">
+                <img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/star.png?updatedAt=1753755887016" alt="star"
+                    id="star3">
+            </div>
+            <div class="greet">Victory!</div>
+            <div class="winner" id="winner">You Won Match</div>
+            <div class="buttonContainer">
+                <div class="gameBtn" id="botModeRematch">Rematch</div>
+                <div class="gameBtn" id="botModeReset">Reset</div>
+            </div>
+        </div>
+        <div class="popupCard" id="defeatPopup">
+            <div class="botImage"><img src="https://ik.imagekit.io/ik0myx9mu/GridStrike/bot.png?updatedAt=1754402317369"
+                    alt="Bot"></div>
+            <div class="greet">Defeat!</div>
+            <div class="defeat">Bot Won Match</div>
+            <div class="buttonContainer">
+                <div class="gameBtn" id="defeatRematch">Rematch</div>
+                <div class="gameBtn" id="defeatReset">Reset</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="src/windowAction.js"></script>
+<script src="src/botTurnHandler.js"></script>
+<script src="src/modeSelector.js"></script>
+<script src="src/turnHandler.js"></script>
+<script src="src/checkWinner.js"></script>
+<script src="src/popupHandler.js"></script>
+<script src="src/RematchReset.js"></script>
+<script src="src/botLogic.js"></script>
+
+</html>
