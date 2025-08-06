@@ -1,0 +1,70 @@
+.head-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo img {
+  margin-top: 0.3rem;
+  margin-left: 0.3rem;
+  width: 3rem;
+  border-radius: 0.45rem;
+  box-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe033;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name p {
+  font-family: "Cinzel", serif;
+  font-size: 2rem;
+  color: #fbe8c7;
+  margin-top: 0.3rem;
+}
+
+.control-button {
+  width: 100px;
+  padding: 4px 8px;
+  border: 2px solid white;
+  border-radius: 4px;
+}
+
+@media (max-width: 524px) {
+  .logo img {
+    width: 2rem;
+  }
+
+  .name p {
+    font-size: 1.5rem;
+  }
+
+  .control-button {
+    padding: 4px 4px;
+  }
+
+  .logo img {
+    border-radius: 0.35rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .logo img {
+    width: 3rem;
+  }
+
+  .name p {
+    font-size: 2rem;
+  }
+
+  .control-button {
+    padding: 0.2rem 0.2rem;
+  }
+
+  .logo img {
+    border-radius: 0.35rem;
+  }
+}

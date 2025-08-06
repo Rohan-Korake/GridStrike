@@ -1,0 +1,133 @@
+.popupContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  color: aliceblue;
+  display: none;
+}
+
+.popupCard {
+  top: 50%;
+  left: 50%;
+  width: 65vw;
+  max-width: 20rem;
+  max-height: 32rem;
+  background-color: #032547;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 1rem 1rem;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  display: none;
+}
+
+.starContianer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.starContianer img {
+  width: 3rem;
+  height: auto;
+  animation: twinkle 1.2s 1 ease-in-out;
+}
+
+@keyframes twinkle {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 500px) {
+  .starContianer img {
+    width: 2rem;
+    height: auto;
+  }
+}
+
+#star2 {
+  margin-bottom: 1.5rem;
+}
+
+.greet {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+}
+
+.winner,
+.defeat {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffd700; /* Gold */
+  margin-top: 10px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000; /* slight glow */
+  font-family: "Segoe UI", sans-serif;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 1rem;
+  gap: 1rem;
+  margin-left: 0.1rem;
+}
+
+.gameBtn {
+  width: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2.5rem;
+  padding: 1rem 1rem;
+  font-size: 16px;
+  background-color: #1e90ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gameBtn:hover {
+  background-color: #007acc;
+  transform: scale(1.05);
+}
+
+.handShake,
+.botImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.handShake img,
+.botImage img {
+  width: 4rem;
+  height: auto;
+}
