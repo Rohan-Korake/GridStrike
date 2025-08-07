@@ -52,7 +52,7 @@ function botMove() {
     availableCells = availableCells.filter((cell) => cell !== randomCell);
     checkBotWin();
     isBotTurn = false;
-  }, 1000);
+  }, 600);
 }
 
 function checkBotWin() {
