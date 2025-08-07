@@ -43,3 +43,7 @@ function singlePlayerResultPopup(result) {
     document.getElementById("defeatPopup").style.display = "block";
   }
 }
+
+function showGamePage() {
+  document.getElementById("gamepage").style.opacity = 1;
+}
