@@ -3,8 +3,6 @@ let playedCells = {};
 let winnerDetected = false;
 let isRematch = true;
 let isBotTurn = false;
-let randomIndex;
-let randomCell;
 
 document.addEventListener("click", function (event) {
   if (!isBotMode) return;
@@ -39,17 +37,11 @@ function botMove() {
     document.getElementById("x").style.borderColor = "#00FFA3";
     if (availableCells.length == 0) return;
     let logicalBotMove = decideBotMove();
-    if (logicalBotMove === null) {
-      randomCell = logicalBotMove;
-    } else {
-      randomIndex = Math.floor(Math.random() * availableCells.length);
-      randomCell = Number(availableCells[randomIndex]);
-    }
-    const randomBlock = document.getElementById(randomCell);
+    const randomBlock = document.getElementById(logicalBotMove);
     randomBlock.innerText = "O";
     randomBlock.style.color = "#FFDC60";
-    playedCells[randomCell] = "O";
-    availableCells = availableCells.filter((cell) => cell !== randomCell);
+    playedCells[logicalBotMove] = "O";
+    availableCells = availableCells.filter((cell) => cell !== logicalBotMove);
     checkBotWin();
     isBotTurn = false;
   }, 600);

@@ -11,41 +11,38 @@ winCombinations = [
   [3, 5, 7],
 ];
 
-function logicalMove(playerMark) {
+function logicalMove(checkSymbol) {
   for (let combination of winCombinations) {
     const [cell1, cell2, cell3] = combination;
 
     //if place at cell1
     if (
-      playedCells[cell2] == playerMark &&
-      playedCells[cell3] == playerMark &&
+      playedCells[cell2] == checkSymbol &&
+      playedCells[cell3] == checkSymbol &&
       !playedCells[cell1] &&
       availableCells.includes(cell1)
     ) {
       botTargetCell.push(cell1);
-      return;
     }
 
     //if place at cell2
     if (
-      playedCells[cell1] == playerMark &&
-      playedCells[cell3] == playerMark &&
+      playedCells[cell1] == checkSymbol &&
+      playedCells[cell3] == checkSymbol &&
       !playedCells[cell2] &&
       availableCells.includes(cell2)
     ) {
       botTargetCell.push(cell2);
-      return;
     }
 
     //if place at cell2
     if (
-      playedCells[cell1] == playerMark &&
-      playedCells[cell2] == playerMark &&
+      playedCells[cell1] == checkSymbol &&
+      playedCells[cell2] == checkSymbol &&
       !playedCells[cell3] &&
       availableCells.includes(cell3)
     ) {
       botTargetCell.push(cell3);
-      return;
     }
   }
 }
@@ -53,6 +50,8 @@ function logicalMove(playerMark) {
 function decideBotMove() {
   let pickedCell;
   botTargetCell = [];
+
+  logicalMove("X");
   logicalMove("O");
   if (botTargetCell.length > 0) {
     pickedCell =
@@ -60,10 +59,7 @@ function decideBotMove() {
     return pickedCell;
   }
 
-  logicalMove("X");
-  if (botTargetCell.length > 0) {
-    pickedCell =
-      botTargetCell[Math.floor(Math.random() * botTargetCell.length)];
-    return pickedCell;
-  }
+  let randomIndex = Math.floor(Math.random() * availableCells.length);
+  let randomCell = Number(availableCells[randomIndex]);
+  return randomCell;
 }
