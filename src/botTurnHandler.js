@@ -22,6 +22,7 @@ document.addEventListener("click", function (event) {
     checkBotWin();
     if (winnerDetected) return;
     botMove();
+    b;
   }
 
   if (isRematch) {
@@ -58,6 +59,7 @@ function checkBotWin() {
       xWins.innerText = parseInt(xWins.innerText) + 1;
       singlePlayerResultPopup("Win");
       winnerDetected = true;
+      return;
     } else if (
       playedCells[combination[0]] === "O" &&
       playedCells[combination[1]] === "O" &&
@@ -67,6 +69,7 @@ function checkBotWin() {
       oWins.innerText = parseInt(xWins.innerText) + 1;
       setTimeout(() => {
         singlePlayerResultPopup("Loss");
+        return;
       }, 600);
       winnerDetected = true;
     }
