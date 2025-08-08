@@ -10,6 +10,7 @@ document.addEventListener("click", function (event) {
 
   if (positionMap[cellId] && block.innerText === "") {
     block.textContent = currentTurn;
+    addAnimation(block);
     currentTurn = currentTurn === "X" ? "O" : "X";
 
     //Game color

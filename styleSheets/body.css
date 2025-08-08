@@ -35,11 +35,6 @@ html {
   background-color: #0f0d21ab;
 }
 
-@media (max-width: 575px) {
-  .card {
-    height: 80vh;
-  }
-}
 @keyframes animate {
   0% {
     backdrop-filter: blur(0px);

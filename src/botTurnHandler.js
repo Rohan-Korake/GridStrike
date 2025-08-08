@@ -13,6 +13,7 @@ document.addEventListener("click", function (event) {
 
   if (positionMap[boxId] && cell.innerText === "") {
     cell.textContent = "X";
+    addAnimation(cell);
     isBotTurn = true;
     cell.style.color = "#FF4FCB";
     playedCells[boxId] = "X";
@@ -41,6 +42,7 @@ function botMove() {
     const randomBlock = document.getElementById(logicalBotMove);
     randomBlock.innerText = "O";
     randomBlock.style.color = "#FFDC60";
+    addAnimation(randomBlock);
     playedCells[logicalBotMove] = "O";
     availableCells = availableCells.filter((cell) => cell !== logicalBotMove);
     checkBotWin();
