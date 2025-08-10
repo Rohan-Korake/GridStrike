@@ -23,7 +23,6 @@ document.addEventListener("click", function (event) {
     checkBotWin();
     if (winnerDetected) return;
     botMove();
-    b;
   }
 
   if (isRematch) {
