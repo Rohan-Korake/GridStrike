@@ -31,6 +31,18 @@
   display: none;
 }
 
+.popupCard.active {
+  animation: popupCardAnimtion 2s 1 ease;
+}
+
+@keyframes popupCardAnimtion {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .starContianer {
   width: 100%;
   display: flex;

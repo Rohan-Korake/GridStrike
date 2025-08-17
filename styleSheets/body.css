@@ -30,20 +30,18 @@ html {
   color: wheat;
   display: flex;
   flex-direction: column;
-  animation: animate 0.8s 1 ease;
   overflow: auto;
   background-color: #0f0d21ab;
+  animation: animate 3s infinite ease alternate;
 }
 
 @keyframes animate {
   0% {
-    backdrop-filter: blur(0px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 1px #00fff7;
+    box-shadow: 0 0 6px #00fff7, 0 0 12px #00fff7;
+    backdrop-filter: blur(6px);
   }
   100% {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 20px #00fff7;
+    box-shadow: 0 0 12px #00fff7, 0 0 20px #00fff7;
+    backdrop-filter: blur(8px);
   }
 }
